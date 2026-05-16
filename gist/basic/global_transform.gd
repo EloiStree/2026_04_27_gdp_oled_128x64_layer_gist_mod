@@ -14,7 +14,7 @@ func append_layer(array: Array[bool]) -> void:
 
     # Print header
     E13ScreenBuilderPrint6x8.print_text_6x8_at_lrtd(
-        array, Vector2i(0, 2), "Global Transform3D", true, true
+        array, Vector2i(0, 2), "Global Transform3D         ", true, true
     )
 
     # === Extract transform data ===
