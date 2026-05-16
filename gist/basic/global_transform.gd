@@ -14,20 +14,20 @@ func append_layer(array: Array[bool]) -> void:
 
     # Print header
     E13ScreenBuilderPrint6x8.print_text_6x8_at_lrtd(
-        array, Vector2i(0, 2), "Global Transform3D         ", true, true
+        array, Vector2i(0, 2), "Global Value              ", true, true
     )
 
     # === Extract transform data ===
-    var transform: Transform3D = owner.global_transform if owner else Transform3D.IDENTITY
-    
+    var transform: Transform3D = global_transform
+
     var position: Vector3 = transform.origin
     var euler: Vector3 = transform.basis.get_euler()
     var quaternion: Quaternion = transform.basis.get_rotation_quaternion()
     
     # Direction (Forward)
-    var forward: Vector3 = -transform.basis.z  # Godot uses -Z as forward
+    var forward: Vector3 = -transform.basis.z
 
-    # === Print with nice formatting (2 decimal places) ===
+    # === Print with nice formatting ===
     E13ScreenBuilderPrint6x8.print_text_6x8_at_lrtd(
         array, Vector2i(2, 20), "P:" + format_vec3(position), true, true
     )
@@ -45,6 +45,5 @@ func append_layer(array: Array[bool]) -> void:
     )
 
 
-# Helper function to format Vector3 with 2 decimal places
 func format_vec3(v: Vector3) -> String:
     return "%.1f, %.1f, %.1f" % [v.x, v.y, v.z]
