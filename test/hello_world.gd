@@ -4,4 +4,4 @@ func _ready():
 	
 func append_layer(array_128x64: Array[bool]) -> void:
 	for i in range(8192):
-		array_128x64[i] = i%11==0
+		array_128x64[i] = i%16==0
