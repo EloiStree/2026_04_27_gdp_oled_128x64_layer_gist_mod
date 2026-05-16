@@ -1,4 +1,4 @@
-extends Node
+extends Node3D
 
 func append_layer(array: Array[bool]) -> void:
     # Clear or initialize pattern
