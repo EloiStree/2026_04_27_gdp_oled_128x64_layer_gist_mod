@@ -1,9 +1,10 @@
+# https://raw.githubusercontent.com/EloiStree/2026_04_27_gdp_oled_128x64_layer_gist_mod/refs/heads/main/gist/mod/ks4036_ssd1306/input_and_read.gd
+
 extends Node3D
 
 # TO COMMUNICATE WITH THE CAR through NodePath
 @onread var car_input = "$%KS4036Input"
 @onread var car_read = "$%KS4036Read"
-
 
 """
 # TO COMMUNICATE WITH THE CAR throught static func
